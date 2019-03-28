@@ -1,0 +1,6 @@
+{
+    "host": "localhost",
+    "dbName": "sitestage",
+    "user": "devStage",
+    "pass": "krema42"
+}
