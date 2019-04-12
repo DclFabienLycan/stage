@@ -3,17 +3,6 @@
 // Connexion à la BDD
 include '../modele/pdo.php';
 
-if (isset($_POST['formContact'])) {    
-  // Préparation de la requête avec les bindParam
-  $req = $pdo->prepare("INSERT INTO formulaire SET nomContact = :nom, prenomContact = :prenom, numeroTelcontact = :num, mailContact = :mail, messageContact = :mess");
-  $req->bindParam(':nom', $_POST['nomContact']);
-  $req->bindParam(':prenom', $_POST['prenomContact']);
-  $req->bindParam(':num', $_POST['numeroTelContact']);
-  $req->bindParam(':mail', $_POST['mailContact']);
-  $req->bindParam(':mess', $_POST['messageContact']);
-  $req->execute();
-}
-
 //on démarre la session
 session_start();
 
@@ -54,7 +43,7 @@ header('Location: ../vue/contactForm.php');
     $headers  = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
     $headers .= 'FROM:' . htmlspecialchars($_POST['mailContact']);
-    $to = 'dcl.fabienb@18pixel.fr'; // Insérer votre adresse email ICI
+    $to = ''; // Insérer votre adresse email ICI
     $subject = 'Message envoyé par ' . htmlspecialchars($_POST['nomContact']) . ' ' . htmlspecialchars($_POST['prenomContact']) ;
     $message_content = '
     <table>
