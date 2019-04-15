@@ -106,7 +106,7 @@ require '../modele/pdo.php';
                     ?>
                     
                     <h3 id="comm" class="text-center">Commentaire n°<?= $id ?></h3>
-                    <form action="traitement.php" method="POST" enctype="multipart/form-data" class="myForm">
+                    <form action="../controller/traitement.php" method="POST" enctype="multipart/form-data" class="myForm">
                     <div class="container formulaire<?= $i ?>">
                         <div class="form-row">
                             <div class="col-sm-3 offset-md-3">

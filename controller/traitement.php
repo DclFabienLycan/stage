@@ -1,6 +1,6 @@
 <?php
 
-include '../php/modele/pdo.php';
+include '../modele/pdo.php';
 
 if(isset($_POST['update'])) {
 
@@ -36,4 +36,4 @@ if(isset($_POST['delete'])) {
     }
 }
 
-header('Location:gestion.php');
+header('Location:../vue/gestion.php');
