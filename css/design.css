@@ -812,3 +812,28 @@ input::-o-outer-spin-button {
         width: 30px;
     }
 }
+
+@media screen and (max-width:1150px) {
+
+    .headerD {
+        display: none;
+    }
+
+    .headerG h1 {
+        font-size: 2em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+    }
+
+    .text-incline {
+        font-size: 1.6em;
+        margin-bottom: auto;
+        margin-left: 0;
+        margin-top: 15%;
+    }
+
+    .barre {
+        display: none;
+    }
+}
